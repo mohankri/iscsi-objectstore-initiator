@@ -41,6 +41,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+typedef long            __kernel_long_t;
+typedef unsigned long   __kernel_ulong_t;
+
 #include <open-osd/libosd.h>
 #include <linux/blkdev.h>
 #include <linux/bsg.h>
@@ -69,7 +72,7 @@ int osd_open(const char *osd_path, struct osd_dev **pod)
 	if (!lod)
 		return ENOMEM;
 
-	ret = osdpath_to_bsgpath(osd_path, bsg_path)) {
+	ret = osdpath_to_bsgpath(osd_path, bsg_path);
 	if (unlikely(ret)) {
 		OSD_ERR("Error in osdpath_to_bsgpath(%s) => %d",
 			osd_path, ret);

@@ -14,6 +14,8 @@
 
 #include <stdio.h>
 #include <ctype.h>
+typedef long            __kernel_long_t;
+typedef unsigned long   __kernel_ulong_t;
 
 #include <linux/types.h>
 #include "kalloc.h"

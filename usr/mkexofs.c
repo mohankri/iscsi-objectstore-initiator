@@ -24,6 +24,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
+typedef long            __kernel_long_t;
+typedef unsigned long   __kernel_ulong_t;
 
 #include "mkexofs.h"
 #include <scsi/osd_sense.h>

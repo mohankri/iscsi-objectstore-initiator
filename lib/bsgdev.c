@@ -38,6 +38,9 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+typedef long            __kernel_long_t;
+typedef unsigned long   __kernel_ulong_t;
+
 #include <fcntl.h>
 #include <stdio.h>
 #include <stdarg.h>

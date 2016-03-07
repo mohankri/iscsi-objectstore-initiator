@@ -34,6 +34,8 @@
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+typedef long            __kernel_long_t;
+typedef unsigned long   __kernel_ulong_t;
 
 #include <open-osd/libosd.h>
 

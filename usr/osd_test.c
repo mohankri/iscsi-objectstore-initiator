@@ -44,6 +44,8 @@
 #include <stdlib.h>
 #include <sys/ioctl.h>
 #include <unistd.h>
+typedef long            __kernel_long_t;
+typedef unsigned long   __kernel_ulong_t;
 
 #include <open-osd/libosd.h>
 #include "osd_ktests.h"
