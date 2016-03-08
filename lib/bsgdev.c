@@ -167,7 +167,11 @@ int bio_add_pc_page(struct request_queue *q __unused,
 		    struct bio *bio, struct page *page, unsigned len,
 		    unsigned offset __unused)
 {
+#if KM
 	if (bio->bi_max_vecs >= bio->bi_vecs)
+		return 0;
+#endif
+	if (bio->bi_max_vecs < bio->bi_vecs)
 		return 0;
 
 	bio->bi_vec[bio->bi_vecs].mem = page;
@@ -175,6 +179,7 @@ int bio_add_pc_page(struct request_queue *q __unused,
 	bio->bi_size += len;
 
 	bio->bi_vecs++;
+	return len;
 }
 
 struct bio *bio_map_kern(struct request_queue *q __unused,
